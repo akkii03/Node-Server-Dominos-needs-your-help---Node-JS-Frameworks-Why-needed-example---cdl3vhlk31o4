@@ -6,18 +6,21 @@ const port = 8081;
 
 function handleServer(req, res) {
   if(req.url==='/welcome'){
+    res.statusCode=200;
     res.end("Welcome to Dominos!");
-    res.sendStatus(200);
   }
 
   if(req.url==='/contact') {
+    res.statusCode=200;
     res.end(JSON.stringify(
         {phone: '18602100000',
     email: 'guestcaredominos@jublfood.com'}
     ))
+    
   }
   else{
-    res.sendStatus(404);
+    res.statusCode=404;
+    res.end("404");
   }
 }
 
