@@ -9,10 +9,10 @@ function handleServer(req, res) {
   }
   if(req.url==='/contact') {
     res.statusCode=200;
-    return res.end(JSON.stringify(
+    return res.end(
         {phone: '18602100000',
     email: 'guestcaredominos@jublfood.com'}
-    ))  
+    )  
   }
   else{
     res.statusCode=404;
